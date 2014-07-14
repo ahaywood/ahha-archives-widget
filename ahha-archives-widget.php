@@ -76,6 +76,6 @@ add_action( 'widgets_init', create_function('', 'return register_widget("AhhaArc
 
 // REGISTER JAVASCRIPT
 function RegisterAhhaArchivesWidgetJS() {
-  wp_enqueue_script('AhhaArchivesWidgetJS', plugins_url('js/ahha-archives.js',__FILE__ )), array('jquery'));
+  wp_enqueue_script('AhhaArchivesWidgetJS', plugins_url('js/ahha-archives.js',__FILE__ ), array('jquery'));
 }
 add_action('init', 'RegisterAhhaArchivesWidgetJS');
