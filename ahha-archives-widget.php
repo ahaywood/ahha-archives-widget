@@ -35,6 +35,8 @@ class AhhaArchivesWidget extends WP_Widget
  
   function widget($args, $instance)
   {
+
+
     extract($args, EXTR_SKIP);
  
     echo $before_widget;
@@ -43,7 +45,7 @@ class AhhaArchivesWidget extends WP_Widget
     if (!empty($title))
       echo $before_title . $title . $after_title; 
  
- 
+
     // WIDGET CODE GOES HERE ?>
     <ul>
       <?php global $wpdb;
@@ -70,4 +72,10 @@ class AhhaArchivesWidget extends WP_Widget
   }
  
 }
-add_action( 'widgets_init', create_function('', 'return register_widget("AhhaArchivesWidget");') );?>
+add_action( 'widgets_init', create_function('', 'return register_widget("AhhaArchivesWidget");') );
+
+// REGISTER JAVASCRIPT
+function RegisterAhhaArchivesWidgetJS() {
+  wp_enqueue_script('AhhaArchivesWidgetJS', plugins_url('js/ahha-archives.js',__FILE__ )), array('jquery'));
+}
+add_action('init', 'RegisterAhhaArchivesWidgetJS');

@@ -1,4 +1,3 @@
-$.noConflict();
 jQuery(document).ready(function($) {
 
 	// SETUP ARCHIVES IN FOOTER

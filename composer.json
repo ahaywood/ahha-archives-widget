@@ -1,5 +1,5 @@
 {
-  "name": "ahaywood/ahha-archives",
+  "name": "ahaywood/ahha-archives-widget",
   "type": "wordpress-plugin",
   "require": {
     "composer/installers": "v1.0.6"
